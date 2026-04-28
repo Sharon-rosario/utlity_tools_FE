@@ -158,7 +158,7 @@ const App = () => {
             <div className="tech-column">
               <div className="icon-wrap" style={{ marginBottom: '1rem', color: '#14b8a6', background: 'rgba(20, 184, 166, 0.1)' }}>⏱️</div>
               <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>Massive Time Savings</h4>
-              <p>Save 2 hours to 2 days of effort per use. We eliminate the busywork, research phase, and formatting phase entirely.</p>
+              <p>Compress 2 to 10+ hours of manual research and busywork into a single click. We eliminate the exhaustive data gathering phase entirely.</p>
             </div>
             <div className="tech-column">
               <div className="icon-wrap" style={{ marginBottom: '1rem', color: '#14b8a6', background: 'rgba(20, 184, 166, 0.1)' }}>📊</div>
@@ -212,9 +212,11 @@ const App = () => {
           <h2 className="h2-title" style={{ marginTop: '0', borderBottom: 'none', paddingBottom: '0' }}>Backend Architecture Concept</h2>
           <div className="text-content">
             <ul style={{ paddingLeft: '1.5rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><strong>AI-Powered Processing:</strong> Utilizing a multi-model approach where needed (combining different LLMs based on their strengths for writing, logic, or data extraction).</li>
-              <li style={{ marginBottom: '0.5rem' }}><strong>Chained Workflows:</strong> Instead of single prompts, the backend executes complex chains of logic to arrive at the final output.</li>
-              <li><strong>Speed Optimization:</strong> A relentless focus on returning results quickly to maintain the "instant gratification" aspect of the $1 purchase.</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Multi-Agent AI Core:</strong> Intelligent selection of industry-leading models (Groq, ChatGPT, Gemini, Claude) mapped to the specific reasoning or creative requirements of each tool.</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Data Harvesting & Intelligence:</strong> Robust web crawling and scraping systems combined with deep third-party API and platform integrations to ensure high-fidelity, real-world data.</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Chained Pipeline Workflows:</strong> Instead of single prompts, the backend executes complex preprocessing, multi-step AI reasoning, and rigorous postprocessing/validation.</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Specialized Tech Stack:</strong> Leveraging niche libraries and custom frameworks to handle tasks like technical indicator calculation, resume parsing, or document reverse-engineering.</li>
+              <li><strong>Speed Optimization:</strong> A relentless focus on latency reduction to maintain the "instant gratification" aspect of the $1 micro-transaction.</li>
             </ul>
           </div>
         </section>
