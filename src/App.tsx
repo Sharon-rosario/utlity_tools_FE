@@ -7,7 +7,7 @@ const App = () => {
       {/* SIDEBAR NAVIGATION */}
       <aside className="sidebar">
         <div style={{ marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 800 }}>UTILITY<span style={{ color: var('--accent-primary') }}>TOOL</span></h2>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800 }}>UTILITY<span style={{ color: 'var(--accent-primary)' }}>TOOL</span></h2>
           <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>VISION v1.0</p>
         </div>
 
