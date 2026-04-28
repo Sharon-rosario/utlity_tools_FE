@@ -180,9 +180,11 @@ const App = () => {
             <div className="big-price" style={{ background: 'linear-gradient(to bottom, #fff, #eab308)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>1 Credit = ~$1</div>
             <div className="text-content" style={{ textAlign: 'left', marginTop: '2rem' }}>
               <ul style={{ paddingLeft: '1.5rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Base Pricing:</strong> Most tools on the platform cost exactly 1 credit per use.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Advanced Tools:</strong> Some highly complex tools (e.g., those requiring extensive multi-agent research or massive document parsing) may cost more credits based on backend complexity and API costs.</li>
-                <li><strong>The Psychology:</strong> By keeping the base transaction at ~$1, we capitalize on impulse-buy psychology. The value delivered (hours of work saved) vastly outweighs the tiny monetary cost.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Base Pricing:</strong> Most tools cost exactly 1 credit per use, while highly complex tools may cost more based on API usage.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Frictionless Payments:</strong> Users purchase credits in batches. This eliminates the need to enter card details every time they want to use a tool.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Zero Subscription:</strong> It is strictly pay-as-you-go. They use credits entirely based on their own usage frequency, completely bypassing subscription fatigue.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Credit Expiry:</strong> To encourage consistent platform engagement, purchased credits have a <strong>60-day maximum validity period</strong>.</li>
+                <li><strong>The Psychology:</strong> By keeping the transaction decoupled from actual money via credits, we capitalize on impulse-buy psychology. The value delivered vastly outweighs the cost.</li>
               </ul>
             </div>
           </div>
