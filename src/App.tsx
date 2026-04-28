@@ -3,210 +3,456 @@ import './index.css';
 
 const App = () => {
   return (
-    <>
-      <div className="bg-blob bg-blob-1"></div>
-      <div className="bg-blob bg-blob-2"></div>
-      
-      {/* HERO SECTION */}
-      <section className="hero">
-        <div className="container animate-fade-in">
-          <div className="hero-pill">Investor & Team Vision Document</div>
-          <h1>
-            The <span className="text-gradient">$1 Utility Tools</span> Platform
-          </h1>
-          <p className="animate-fade-in delay-1">
-            A collection of high-value, single-use tools that save hours (or days) of work in one click. 
-            No subscriptions. No friction. Just instant, structured outputs for a dollar.
-          </p>
+    <div className="app-container">
+      {/* SIDEBAR NAVIGATION */}
+      <aside className="sidebar">
+        <div style={{ marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800 }}>UTILITY<span style={{ color: var('--accent-primary') }}>TOOL</span></h2>
+          <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>VISION v1.0</p>
         </div>
-      </section>
 
-      {/* CORE VALUE & PRICING */}
-      <section className="section">
-        <div className="container animate-fade-in delay-2">
-          <div className="pricing-box">
-            <h2 style={{ fontSize: '2rem', marginBottom: '24px' }}>The Core Proposition</h2>
-            <div className="price">
-              $1 <span>/ credit</span>
-            </div>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px auto' }}>
-              Pay $1 to save hours of work. Most tools cost exactly 1 credit.
+        <nav>
+          <div className="nav-group">
+            <div className="nav-title">Introduction</div>
+            <a href="#vision" className="nav-link">Platform Vision</a>
+            <a href="#core-concept" className="nav-link">Core Concept</a>
+            <a href="#pricing" className="nav-link">Pricing Model</a>
+          </div>
+
+          <div className="nav-group">
+            <div className="nav-title">Tool Specifications</div>
+            <a href="#tweet-generator" className="nav-link">Tweet Generator</a>
+            <a href="#domain-finder" className="nav-link">Domain Finder</a>
+            <a href="#idea-validator" className="nav-link">Startup Idea Validator</a>
+            <a href="#exam-prep" className="nav-link">Exam Prep Analyzer</a>
+            <a href="#trading-assistant" className="nav-link">Trading Assistant</a>
+            <a href="#investment-assistant" className="nav-link">Investment Assistant</a>
+            <a href="#hiring-tool" className="nav-link">Hiring Decision Tool</a>
+            <a href="#scope-tool" className="nav-link">Scope Breakdown Tool</a>
+            <a href="#proposal-generator" className="nav-link">Proposal Generator</a>
+          </div>
+
+          <div className="nav-group">
+            <div className="nav-title">Marketing Strategy</div>
+            <a href="#seo-growth" className="nav-link">SEO-Led Growth</a>
+            <a href="#content-strategy" className="nav-link">Short-Form Content</a>
+            <a href="#referral" className="nav-link">Referral Loop</a>
+            <a href="#free-layer" className="nav-link">Free Tool Layer</a>
+            <a href="#positioning" className="nav-link">Brand Positioning</a>
+          </div>
+        </nav>
+      </aside>
+
+      {/* MAIN CONTENT AREA */}
+      <main className="main-content">
+        
+        {/* VISION SECTION */}
+        <section id="vision">
+          <h1 className="section-title">The Vision Document</h1>
+          <p className="subtitle">
+            A "$1 Utility Tools Platform" — a collection of high-value, single-use tools that save hours (or days) of work in one click.
+          </p>
+
+          <div className="spec-box">
+            <h3 className="h3-title">Core Value Proposition</h3>
+            <ul style={{ listStyle: 'none' }}>
+              <li style={{ marginBottom: '1rem' }}>🚀 <strong>Save 2 hours to 2 days</strong> of effort per use.</li>
+              <li style={{ marginBottom: '1rem' }}>📊 <strong>Deliver structured, ready-to-use outputs</strong> (not raw AI responses).</li>
+              <li style={{ marginBottom: '1rem' }}>💳 <strong>No subscriptions</strong> — pay only when needed.</li>
+              <li style={{ marginBottom: '1rem' }}>⚡ <strong>Focus on speed + structured delivery</strong> over raw generation.</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* PRICING SECTION */}
+        <section id="pricing">
+          <h2 className="h2-title">Revenue & Pricing Model</h2>
+          <div className="pricing-card">
+            <p style={{ textTransform: 'uppercase', letterSpacing: '0.2rem', color: 'var(--accent-primary)' }}>Flat Pricing</p>
+            <div className="price-tag">$1<span style={{ fontSize: '1.5rem', color: 'var(--text-muted)' }}> / Credit</span></div>
+            <p style={{ marginTop: '1.5rem', color: 'var(--text-secondary)' }}>
+              1 Credit = ~$1. Most tools cost 1 credit per use.
+              Advanced tools may cost more based on complexity.
             </p>
+          </div>
+        </section>
+
+        {/* TOOL SPECIFICATIONS */}
+        <section id="specs">
+          <h2 className="h2-title">Technical Tool Specifications</h2>
+          <p className="subtitle">Detailed breakdown of inputs, backend logic, and outputs for the engineering team.</p>
+
+          {/* 1. Tweet Generator */}
+          <div id="tweet-generator" className="spec-box">
+            <h3 className="h3-title">1. Tweet Generator for X</h3>
+            <p>Generates high-engagement tweets by pulling trending topics and identifying viral hooks.</p>
             
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px', textAlign: 'left' }}>
-              <div className="card" style={{ padding: '24px' }}>
-                <h4 style={{ marginBottom: '12px', color: '#fff' }}>Massive Time Savings</h4>
-                <p style={{ fontSize: '0.9rem' }}>Save 2 hours to 2 days of effort per single use.</p>
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>Niche (AI, entrepreneurship, etc.)</li>
+                  <li>Target audience</li>
+                  <li>Content type (informative, storytelling, etc.)</li>
+                  <li>Goal (growth / authority / engagement)</li>
+                  <li>Tone (witty, professional, bold)</li>
+                  <li>Image requirement (yes/no)</li>
+                </ul>
               </div>
-              <div className="card" style={{ padding: '24px' }}>
-                <h4 style={{ marginBottom: '12px', color: '#fff' }}>Structured Delivery</h4>
-                <p style={{ fontSize: '0.9rem' }}>Clean, ready-to-use results (reports, dashboards). Not raw AI text.</p>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>Pulls trending topics from Google Trends, YouTube, Reddit, and X</li>
+                  <li>Identifies viral hooks and content formats</li>
+                  <li>Uses AI to generate high-engagement tweets</li>
+                </ul>
               </div>
-              <div className="card" style={{ padding: '24px' }}>
-                <h4 style={{ marginBottom: '12px', color: '#fff' }}>No Subscriptions</h4>
-                <p style={{ fontSize: '0.9rem' }}>Pay only when needed. Removing the psychological barrier of monthly fees.</p>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>10 ready-to-post tweets</li>
+                  <li>Strong hooks + clean formatting</li>
+                  <li>Optional image ideas per tweet</li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* PRODUCT LINEUP */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header animate-fade-in delay-3">
-            <h2>Initial Tool Lineup</h2>
-            <p>Our initial offering targets specific pain points across business, professional, and educational niches.</p>
-          </div>
-
-          <div className="card-grid animate-fade-in delay-4">
+          {/* 2. Domain Finder */}
+          <div id="domain-finder" className="spec-box">
+            <h3 className="h3-title">2. Domain Finder Tool</h3>
+            <p>AI-powered tool to generate brandable domain names with real-time availability and risk checks.</p>
             
-            {/* Tool 1 */}
-            <div className="card">
-              <div className="card-icon">🔥</div>
-              <span className="badge badge-pink">Top Tier</span>
-              <span className="badge badge-blue">Business</span>
-              <h3>Proposal Generator</h3>
-              <p>Writing proposals is time-consuming with low conversion. Input client requirements, budget, and niche to instantly generate a full proposal, pricing breakdown, timeline, and persuasive copy.</p>
-              <ul className="feature-list">
-                <li>Directly impacts user income</li>
-                <li>Users will pay daily for this</li>
-                <li>Editable template view like Canva</li>
-              </ul>
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>Business niche + keywords</li>
+                  <li>Brand style (premium, catchy, techy, etc.)</li>
+                  <li>Domain extension (.com, .ai, .io, etc.)</li>
+                  <li>Budget / preferred length</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>Real-time domain availability checks</li>
+                  <li>AI-generated unique, non-generic names</li>
+                  <li>Trademark and existing business filtering</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>Available domain names (ready to buy)</li>
+                  <li>Brand-style variations</li>
+                  <li>Quick risk and availability report</li>
+                </ul>
+              </div>
             </div>
-
-            {/* Tool 2 */}
-            <div className="card">
-              <div className="card-icon">🎯</div>
-              <span className="badge badge-purple">Professional</span>
-              <h3>Scope Breakdown Tool</h3>
-              <p>Prevents scope creep for freelancers and agencies. Converts vague client requirements into a structured scope of work, automatically adding hidden tasks.</p>
-              <ul className="feature-list">
-                <li>Saves hours & prevents loss</li>
-                <li>Generates SRS & proposals</li>
-              </ul>
-            </div>
-
-            {/* Tool 3 */}
-            <div className="card">
-              <div className="card-icon">🤝</div>
-              <span className="badge badge-blue">Business</span>
-              <h3>Hiring Decision Tool</h3>
-              <p>Bad hires are expensive. Input a role and bulk resumes to receive instant hire/reject signals, risk analysis, and salary benchmarks.</p>
-              <ul className="feature-list">
-                <li>Instant screening</li>
-                <li>Risk mitigation for HR</li>
-              </ul>
-            </div>
-
-            {/* Tool 4 */}
-            <div className="card">
-              <div className="card-icon">🌐</div>
-              <span className="badge badge-purple">Startup</span>
-              <h3>Domain Finder Tool</h3>
-              <p>AI-powered tool to generate brandable domain names with real-time availability, trademark filters, and risk checks.</p>
-              <ul className="feature-list">
-                <li>Real-time availability</li>
-                <li>Non-generic, premium names</li>
-              </ul>
-            </div>
-
-            {/* Tool 5 */}
-            <div className="card">
-              <div className="card-icon">💡</div>
-              <span className="badge badge-purple">Startup</span>
-              <h3>Startup Idea Validator</h3>
-              <p>Transforms a raw idea into a complete research dashboard. Analyzes competitors, past failures, market size, risks, and ROI.</p>
-              <ul className="feature-list">
-                <li>Multi-agent research backend</li>
-                <li>Clean dashboard output</li>
-              </ul>
-            </div>
-
-            {/* Tool 6 */}
-            <div className="card">
-              <div className="card-icon">📚</div>
-              <span className="badge badge-green">Education</span>
-              <h3>Exam Prep Analyzer</h3>
-              <p>Last-minute study tool. Upload 3-5 previous year papers. Detects repeated questions, extracts high-weight topics, and generates mock papers & cheat sheets.</p>
-            </div>
-
-            {/* Tool 7 */}
-            <div className="card">
-              <div className="card-icon">📈</div>
-              <span className="badge badge-green">Finance</span>
-              <h3>Trading & Investment Assistant</h3>
-              <p>Smart decision-making tool. Input trade details and risk appetite to get a clear go/no-go signal based on technical and fundamental analysis.</p>
-            </div>
-
-            {/* Tool 8 */}
-            <div className="card">
-              <div className="card-icon">🐦</div>
-              <span className="badge badge-pink">Social</span>
-              <h3>Tweet Generator for X</h3>
-              <p>Pulls trending topics from X, Reddit, and YouTube to generate 10 ready-to-post tweets with strong hooks and clean formatting based on your niche.</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* MARKETING STRATEGY */}
-      <section className="section" style={{ backgroundColor: 'rgba(21, 26, 40, 0.3)' }}>
-        <div className="container">
-          <div className="section-header">
-            <h2>Growth & Marketing Engine</h2>
-            <p>A compounding system where accessibility and value lead to engagement and monetization.</p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '900px', margin: '0 auto' }}>
+          {/* 3. Idea Validator */}
+          <div id="idea-validator" className="spec-box">
+            <h3 className="h3-title">3. Startup Idea Validator</h3>
+            <p>Transforms a raw idea into a complete research dashboard.</p>
             
-            <div className="card" style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
-              <div className="card-icon" style={{ flexShrink: 0, background: 'rgba(59, 130, 246, 0.15)' }}>🔍</div>
-              <div>
-                <h3 style={{ color: 'var(--accent-primary)', marginBottom: '8px' }}>SEO-Led Growth (Utility-First)</h3>
-                <p>Individual tools act as entry points. If one tool ranks or goes viral, it brings organic traffic. Internal linking creates a compounding effect, boosting overall domain authority.</p>
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>Startup idea description</li>
+                  <li>Target market / audience</li>
+                  <li>Budget / scale preference</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>Multi-agent research (idea, competitors, failures, market size)</li>
+                  <li>Pulls real-world data and trends</li>
+                  <li>Analyzes risks, ROI, and market gaps</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>Clean dashboard with key insights</li>
+                  <li>Competitor and failure analysis</li>
+                  <li>Market opportunity and monetization breakdown</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 4. Exam Prep */}
+          <div id="exam-prep" className="spec-box">
+            <h3 className="h3-title">4. Exam Prep Analyzer</h3>
+            <p>Last-minute study tool that identifies patterns from past exam papers.</p>
+            
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>3–5 previous year papers (Upload)</li>
+                  <li>Exam format / pattern</li>
+                  <li>Subject</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>Detects repeated questions and patterns</li>
+                  <li>Extracts high-weight topics</li>
+                  <li>Generates practice material</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>Important and repeated questions</li>
+                  <li>2–3 mock papers</li>
+                  <li>Cheat sheet, flashcards, and quizzes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 5. Trading Assistant */}
+          <div id="trading-assistant" className="spec-box" style={{ borderLeft: '4px solid #f59e0b' }}>
+            <h3 className="h3-title">5. Trading Assistant (Short-Term)</h3>
+            <p>Smart decision-making tool for day trading or swing trading. Focuses on immediate volatility and signals.</p>
+            
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>Trade details (asset, amount)</li>
+                  <li>Stop Loss / Take Profit targets</li>
+                  <li>Risk appetite</li>
+                  <li>Mode (Day / Swing trading)</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>Technical indicators analysis</li>
+                  <li>Short-term signal generation</li>
+                  <li>Real-time News and Sentiment analysis</li>
+                  <li>Short-term risk evaluation</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>Clear decision signal (Go / No-Go)</li>
+                  <li>Short-term market insights</li>
+                  <li>Immediate strategy improvement suggestions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 6. Investment Assistant */}
+          <div id="investment-assistant" className="spec-box" style={{ borderLeft: '4px solid #10b981' }}>
+            <h3 className="h3-title">6. Investment Assistant (Long-Term)</h3>
+            <p>Strategic tool for long-term investing. Focuses on fundamentals, growth trends, and historical stability.</p>
+            
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>Investment asset / amount</li>
+                  <li>Risk appetite</li>
+                  <li>Investment horizon (Years)</li>
+                  <li>Mode (Long-term investing)</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>Fundamental analysis of the asset</li>
+                  <li>Long-term trend forecasting</li>
+                  <li>Macro-economic sentiment analysis</li>
+                  <li>Historical stability vs volatility check</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>Detailed Long-term Investment Report</li>
+                  <li>Risk vs Reward analysis over time</li>
+                  <li>Portfolio impact and trend alignment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 7. Hiring Tool */}
+          <div id="hiring-tool" className="spec-box">
+            <h3 className="h3-title">7. Hiring Decision Tool</h3>
+            <p>Reduces the cost of bad hires by providing objective risk analysis and benchmarking.</p>
+            
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>Target Job Description / Role</li>
+                  <li>Bulk resumes received (PDF/Text)</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>Resume parsing and skill matching</li>
+                  <li>Risk analysis (Experience gaps, job hopping)</li>
+                  <li>Salary benchmarking against market data</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>Hire / Reject signal</li>
+                  <li>Detailed risk analysis report</li>
+                  <li>Salary benchmark suggestion</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 8. Scope Tool */}
+          <div id="scope-tool" className="spec-box">
+            <h3 className="h3-title">8. Scope Breakdown Tool</h3>
+            <p>Prevents scope creep by converting vague client requirements into structured technical documents.</p>
+            
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>Vague client requirements / meeting notes</li>
+                  <li>Project niche</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>Converts vague text into structured scope</li>
+                  <li><strong>Automatically adds hidden tasks</strong> (QA, deployment, documentation)</li>
+                  <li>Estimates complexity</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>Full SRS (Software Requirement Specification)</li>
+                  <li>Quotation Generator</li>
+                  <li>Detailed Proposal Structure</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 9. Proposal Generator */}
+          <div id="proposal-generator" className="spec-box">
+            <h3 className="h3-title">9. Proposal Generator</h3>
+            <p>Increases conversion rates by generating persuasive, high-quality proposals instantly.</p>
+            
+            <div className="tech-grid">
+              <div className="tech-column">
+                <h4>User Inputs</h4>
+                <ul>
+                  <li>Client requirement</li>
+                  <li>Budget range</li>
+                  <li>Niche / Industry</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Backend Logic</h4>
+                <ul>
+                  <li>AI drafting based on niche-specific pain points</li>
+                  <li>Pricing breakdown calculation</li>
+                  <li>Timeline estimation logic</li>
+                  <li>Persuasive copy generation</li>
+                </ul>
+              </div>
+              <div className="tech-column">
+                <h4>Output</h4>
+                <ul>
+                  <li>Full formatted Proposal</li>
+                  <li>Pricing breakdown</li>
+                  <li>Visual Timeline</li>
+                  <li><strong>Editable Canva-like View</strong>: Template based with moving elements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* MARKETING STRATEGY SECTION */}
+        <section id="marketing">
+          <h2 className="h2-title">Marketing & Growth Strategy</h2>
+          <p className="subtitle">The four pillars of compounding growth designed for viral adoption.</p>
+
+          <div className="strategy-list">
+            
+            <div id="seo-growth" className="strategy-item">
+              <div className="strategy-icon">🔍</div>
+              <div className="strategy-content">
+                <h3>1. SEO-LED Growth (Utility-First)</h3>
+                <p>Individual tools act as entry points. If even one tool ranks well or goes viral, it brings consistent organic traffic to the domain. One successful tool boosts overall domain authority.</p>
               </div>
             </div>
 
-            <div className="card" style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
-              <div className="card-icon" style={{ flexShrink: 0, background: 'rgba(236, 72, 153, 0.15)' }}>📱</div>
-              <div>
-                <h3 style={{ color: '#f472b6', marginBottom: '8px' }}>Short-Form Reels Distribution</h3>
-                <p>Convert every tool into a simple, engaging demo video for LinkedIn, X, Instagram, and Reddit. Show the problem → show the tool → show the instant result. Volume over perfection.</p>
+            <div id="content-strategy" className="strategy-item">
+              <div className="strategy-icon">🎥</div>
+              <div className="strategy-content">
+                <h3>2. Short-Form Content (Reels Strategy)</h3>
+                <p>Convert every tool into simple, engaging demo content. <strong>Show the problem → show the tool → show instant result.</strong> Focus on LinkedIn, X, Instagram, and Reddit. Consistency is key: volume + clarity over perfection.</p>
               </div>
             </div>
 
-            <div className="card" style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
-              <div className="card-icon" style={{ flexShrink: 0, background: 'rgba(16, 185, 129, 0.15)' }}>🎁</div>
-              <div>
-                <h3 style={{ color: '#34d399', marginBottom: '8px' }}>Free Tool Funnel & Referral Loop</h3>
-                <p>Offer a layer of completely free tools to remove friction, build trust, and drive traffic. Pair this with a credit-based referral system (invite friends = earn credits) for viral growth.</p>
+            <div id="referral" className="strategy-item">
+              <div className="strategy-icon">🔗</div>
+              <div className="strategy-content">
+                <h3>3. Referral Loop (Credit-Based)</h3>
+                <p>Incentivize users to invite others. Both the referrer and the new user receive extra credits. Purpose: Encourage organic sharing and reduce customer acquisition cost (CAC).</p>
               </div>
             </div>
 
-            <div className="card" style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
-              <div className="card-icon" style={{ flexShrink: 0, background: 'rgba(139, 92, 246, 0.15)' }}>🧠</div>
-              <div>
-                <h3 style={{ color: '#a78bfa', marginBottom: '8px' }}>User-Driven Expansion</h3>
-                <p>Allow users to suggest and vote on new tools. This creates a continuous idea pipeline validated by real demand, fostering ownership and retention.</p>
+            <div id="user-driven" className="strategy-item">
+              <div className="strategy-icon">💡</div>
+              <div className="strategy-content">
+                <h3>4. User-Driven Idea Generation</h3>
+                <p>Feature allowing users to suggest new tools. Creates a continuous idea pipeline validated by real demand. Evolution: Voting system for most requested tools.</p>
+              </div>
+            </div>
+
+            <div id="free-layer" className="strategy-item">
+              <div className="strategy-icon">🆓</div>
+              <div className="strategy-content">
+                <h3>5. Free Tool Layer</h3>
+                <p>Tools with zero backend/API cost act as friction-less entry points. Build trust by delivering immediate value at no cost. Funnel: Free tools → Platform exploration → Paid tool usage.</p>
+              </div>
+            </div>
+
+            <div id="positioning" className="strategy-item">
+              <div className="strategy-icon">🏷️</div>
+              <div className="strategy-content">
+                <h3>6. Brand Positioning ($1 Store)</h3>
+                <p>Built around a powerful mental model: <strong>"Affordable, accessible, utility-first."</strong> Familiar pricing psychology reduces hesitation and encourages experimentation.</p>
               </div>
             </div>
 
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer>
-        <div className="container">
-          <h2 style={{ fontFamily: 'Outfit', color: 'var(--text-primary)', marginBottom: '16px' }}>The "$1 Store" Mental Model</h2>
-          <p style={{ maxWidth: '600px', margin: '0 auto', marginBottom: '32px' }}>
-            Affordable, accessible, utility-first tools. Familiar pricing psychology reduces hesitation, encourages repeat usage, and makes the platform easy to market and adopt at scale.
-          </p>
-          <p style={{ fontSize: '0.875rem', opacity: 0.5 }}>© 2026 Utility Tools Platform Vision Document. All Rights Reserved.</p>
-        </div>
-      </footer>
-    </>
+        <footer style={{ marginTop: '6rem', paddingBottom: '4rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+          <p>© 2026 Utility Tools Platform. Vision Document for Technical Team and Investors.</p>
+          <p>Confidential Proprietary Information.</p>
+        </footer>
+
+      </main>
+    </div>
   );
 };
 
