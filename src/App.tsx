@@ -27,6 +27,18 @@ import './index.css';
 const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
+  // Prevent body scroll when sidebar is open on mobile
+  React.useEffect(() => {
+    if (isSidebarOpen && window.innerWidth < 1024) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isSidebarOpen]);
+
   // Close sidebar on link click (mobile)
   const handleLinkClick = () => {
     if (window.innerWidth < 1024) {
