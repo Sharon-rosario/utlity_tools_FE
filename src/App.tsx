@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 const App = () => {
@@ -9,6 +9,28 @@ const App = () => {
     if (window.innerWidth < 1024) {
       setSidebarOpen(false);
     }
+  };
+
+  // Color Palette
+  const colors = {
+    proposal: '#ef4444', // Red
+    scope: '#3b82f6',    // Blue
+    hiring: '#8b5cf6',   // Purple
+    tweet: '#ec4899',    // Pink
+    domain: '#06b6d4',   // Cyan
+    idea: '#f97316',     // Orange
+    exam: '#14b8a6',     // Teal
+    trading: '#f59e0b',  // Amber
+    investment: '#10b981'// Green
+  };
+
+  const marketingColors = {
+    seo: '#3b82f6',
+    reels: '#ec4899',
+    user: '#f59e0b',
+    referral: '#10b981',
+    free: '#06b6d4',
+    brand: '#8b5cf6'
   };
 
   return (
@@ -42,25 +64,55 @@ const App = () => {
 
           <div className="nav-group">
             <div className="nav-title">DETAILED TOOL SPECS</div>
-            <a href="#tool-proposal" className="nav-link" onClick={handleLinkClick}>1. Proposal Generator (Top Tier)</a>
-            <a href="#tool-scope" className="nav-link" onClick={handleLinkClick}>2. Scope Breakdown Tool</a>
-            <a href="#tool-hiring" className="nav-link" onClick={handleLinkClick}>3. Hiring Decision Tool</a>
-            <a href="#tool-tweet" className="nav-link" onClick={handleLinkClick}>4. Tweet Generator for X</a>
-            <a href="#tool-domain" className="nav-link" onClick={handleLinkClick}>5. Domain Finder Tool</a>
-            <a href="#tool-validator" className="nav-link" onClick={handleLinkClick}>6. Startup Idea Validator</a>
-            <a href="#tool-exam" className="nav-link" onClick={handleLinkClick}>7. Exam Prep Analyzer</a>
-            <a href="#tool-trading" className="nav-link" onClick={handleLinkClick}>8. Trading Assistant (Short-term)</a>
-            <a href="#tool-investment" className="nav-link" onClick={handleLinkClick}>9. Investment Assistant (Long-term)</a>
+            <a href="#tool-proposal" className="nav-link color-nav" style={{ '--hover-color': colors.proposal } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.proposal }}></span> 1. Proposal Generator
+            </a>
+            <a href="#tool-scope" className="nav-link color-nav" style={{ '--hover-color': colors.scope } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.scope }}></span> 2. Scope Breakdown
+            </a>
+            <a href="#tool-hiring" className="nav-link color-nav" style={{ '--hover-color': colors.hiring } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.hiring }}></span> 3. Hiring Decision Tool
+            </a>
+            <a href="#tool-tweet" className="nav-link color-nav" style={{ '--hover-color': colors.tweet } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.tweet }}></span> 4. Tweet Generator
+            </a>
+            <a href="#tool-domain" className="nav-link color-nav" style={{ '--hover-color': colors.domain } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.domain }}></span> 5. Domain Finder
+            </a>
+            <a href="#tool-validator" className="nav-link color-nav" style={{ '--hover-color': colors.idea } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.idea }}></span> 6. Idea Validator
+            </a>
+            <a href="#tool-exam" className="nav-link color-nav" style={{ '--hover-color': colors.exam } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.exam }}></span> 7. Exam Prep Analyzer
+            </a>
+            <a href="#tool-trading" className="nav-link color-nav" style={{ '--hover-color': colors.trading } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.trading }}></span> 8. Trading Assistant
+            </a>
+            <a href="#tool-investment" className="nav-link color-nav" style={{ '--hover-color': colors.investment } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.investment }}></span> 9. Investment Assistant
+            </a>
           </div>
 
           <div className="nav-group">
             <div className="nav-title">COMPREHENSIVE MARKETING</div>
-            <a href="#marketing-seo" className="nav-link" onClick={handleLinkClick}>1. SEO-Led Growth</a>
-            <a href="#marketing-reels" className="nav-link" onClick={handleLinkClick}>2. Short-Form Content (Reels)</a>
-            <a href="#marketing-user" className="nav-link" onClick={handleLinkClick}>3. User-Driven Idea Generation</a>
-            <a href="#marketing-referral" className="nav-link" onClick={handleLinkClick}>4. Referral Loop</a>
-            <a href="#marketing-free" className="nav-link" onClick={handleLinkClick}>5. Free Tool Layer</a>
-            <a href="#marketing-brand" className="nav-link" onClick={handleLinkClick}>6. Brand Positioning ($1 Store)</a>
+            <a href="#marketing-seo" className="nav-link color-nav" style={{ '--hover-color': marketingColors.seo } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: marketingColors.seo }}></span> 1. SEO-Led Growth
+            </a>
+            <a href="#marketing-reels" className="nav-link color-nav" style={{ '--hover-color': marketingColors.reels } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: marketingColors.reels }}></span> 2. Short-Form Content
+            </a>
+            <a href="#marketing-user" className="nav-link color-nav" style={{ '--hover-color': marketingColors.user } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: marketingColors.user }}></span> 3. User-Driven Ideas
+            </a>
+            <a href="#marketing-referral" className="nav-link color-nav" style={{ '--hover-color': marketingColors.referral } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: marketingColors.referral }}></span> 4. Referral Loop
+            </a>
+            <a href="#marketing-free" className="nav-link color-nav" style={{ '--hover-color': marketingColors.free } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: marketingColors.free }}></span> 5. Free Tool Layer
+            </a>
+            <a href="#marketing-brand" className="nav-link color-nav" style={{ '--hover-color': marketingColors.brand } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: marketingColors.brand }}></span> 6. Brand Positioning
+            </a>
           </div>
         </nav>
       </aside>
@@ -77,7 +129,7 @@ const App = () => {
           </p>
         </section>
 
-        <section id="the-problem" className="spec-box">
+        <section id="the-problem" className="spec-box" style={{ borderLeft: '4px solid var(--accent-secondary)' }}>
           <h2 className="h2-title" style={{ marginTop: '0', borderBottom: 'none', paddingBottom: '0' }}>The Market Problem</h2>
           <div className="text-content">
             <p>The modern digital worker faces two massive friction points when seeking solutions:</p>
@@ -88,7 +140,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="the-solution" className="spec-box">
+        <section id="the-solution" className="spec-box" style={{ borderLeft: '4px solid var(--accent-primary)' }}>
           <h2 className="h2-title" style={{ marginTop: '0', borderBottom: 'none', paddingBottom: '0' }}>The Solution: The Platform Concept</h2>
           <div className="text-content">
             <p>
@@ -100,32 +152,32 @@ const App = () => {
           </div>
         </section>
 
-        <section id="core-value" className="spec-box">
+        <section id="core-value" className="spec-box" style={{ borderLeft: '4px solid #14b8a6' }}>
           <h2 className="h2-title" style={{ marginTop: '0', borderBottom: 'none', paddingBottom: '0' }}>Core Value Proposition</h2>
           <div className="tech-grid" style={{ marginTop: '1.5rem' }}>
             <div className="tech-column">
-              <div className="icon-wrap" style={{ marginBottom: '1rem' }}>⏱️</div>
+              <div className="icon-wrap" style={{ marginBottom: '1rem', color: '#14b8a6', background: 'rgba(20, 184, 166, 0.1)' }}>⏱️</div>
               <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>Massive Time Savings</h4>
               <p>Save 2 hours to 2 days of effort per use. We eliminate the busywork, research phase, and formatting phase entirely.</p>
             </div>
             <div className="tech-column">
-              <div className="icon-wrap" style={{ marginBottom: '1rem' }}>📊</div>
+              <div className="icon-wrap" style={{ marginBottom: '1rem', color: '#14b8a6', background: 'rgba(20, 184, 166, 0.1)' }}>📊</div>
               <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>Structured, Ready-to-Use Outputs</h4>
               <p>We deliver clean results—reports, dashboards, visual timelines, and actionable suggestions. High-value insights designed for immediate action, requiring absolutely no further prompting.</p>
             </div>
             <div className="tech-column">
-              <div className="icon-wrap" style={{ marginBottom: '1rem' }}>🔓</div>
+              <div className="icon-wrap" style={{ marginBottom: '1rem', color: '#14b8a6', background: 'rgba(20, 184, 166, 0.1)' }}>🔓</div>
               <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>Zero Subscription Friction</h4>
               <p>No subscriptions. Pay only when needed. This completely removes the psychological barrier to entry.</p>
             </div>
           </div>
         </section>
 
-        <section id="pricing-model" className="spec-box" style={{ background: 'linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.9))', borderColor: 'var(--accent-primary)' }}>
+        <section id="pricing-model" className="spec-box" style={{ background: 'linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.9))', borderLeft: '4px solid #eab308' }}>
           <h2 className="h2-title" style={{ marginTop: '0', borderBottom: 'none', paddingBottom: '0' }}>Pricing & Revenue Model</h2>
           <div className="pricing-section" style={{ border: 'none', background: 'transparent', padding: '1rem 0' }}>
-            <p className="badge" style={{ marginBottom: '1rem', background: 'rgba(59, 130, 246, 0.2)' }}>Credit-Based System</p>
-            <div className="big-price">1 Credit = ~$1</div>
+            <p className="badge" style={{ marginBottom: '1rem', background: 'rgba(234, 179, 8, 0.2)', color: '#eab308' }}>Credit-Based System</p>
+            <div className="big-price" style={{ background: 'linear-gradient(to bottom, #fff, #eab308)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>1 Credit = ~$1</div>
             <div className="text-content" style={{ textAlign: 'left', marginTop: '2rem' }}>
               <ul style={{ paddingLeft: '1.5rem' }}>
                 <li style={{ marginBottom: '0.5rem' }}><strong>Base Pricing:</strong> Most tools on the platform cost exactly 1 credit per use.</li>
@@ -136,25 +188,25 @@ const App = () => {
           </div>
         </section>
 
-        <section id="target-audience" className="spec-box">
+        <section id="target-audience" className="spec-box" style={{ borderLeft: '4px solid #ec4899' }}>
           <h2 className="h2-title" style={{ marginTop: '0', borderBottom: 'none', paddingBottom: '0' }}>Target Audience & Tool Categories</h2>
           <div className="tech-grid" style={{ marginTop: '1.5rem' }}>
             <div className="tech-column">
-              <h4 style={{ color: 'var(--accent-primary)' }}>Business Tools</h4>
+              <h4 style={{ color: '#ec4899' }}>Business Tools</h4>
               <p>Targeted at entrepreneurs, founders, and marketers. Examples: Domain finder, startup idea validator, tweet generators.</p>
             </div>
             <div className="tech-column">
-              <h4 style={{ color: 'var(--accent-primary)' }}>Professional Tools</h4>
+              <h4 style={{ color: '#ec4899' }}>Professional Tools</h4>
               <p>Targeted at freelancers, agencies, HR, and consultants. Examples: Proposal generators, scope breakdown tools, hiring decision tools, accounting analysis.</p>
             </div>
             <div className="tech-column">
-              <h4 style={{ color: 'var(--accent-primary)' }}>Education & Hobby Tools</h4>
+              <h4 style={{ color: '#ec4899' }}>Education & Hobby Tools</h4>
               <p>Targeted at students and casual users. Examples: Exam prep analyzers, document summaries, one-time use cases.</p>
             </div>
           </div>
         </section>
 
-        <section id="backend-architecture" className="spec-box">
+        <section id="backend-architecture" className="spec-box" style={{ borderLeft: '4px solid #8b5cf6' }}>
           <h2 className="h2-title" style={{ marginTop: '0', borderBottom: 'none', paddingBottom: '0' }}>Backend Architecture Concept</h2>
           <div className="text-content">
             <ul style={{ paddingLeft: '1.5rem' }}>
@@ -171,14 +223,14 @@ const App = () => {
         <p className="subtitle">An exhaustive breakdown of every proposed tool, detailing the exact problems solved, required user inputs, backend processing logic, and the final structured outputs.</p>
 
         {/* 1. Proposal Generator */}
-        <div id="tool-proposal" className="spec-box" style={{ borderLeft: '4px solid #ef4444' }}>
-          <div className="badge" style={{ background: 'rgba(239, 68, 68, 0.2)', color: '#ef4444', marginBottom: '1rem' }}>🔥 Top-Tier Idea</div>
-          <h3 className="h3-title">1. Proposal Generator</h3>
+        <div id="tool-proposal" className="spec-box" style={{ borderLeft: `4px solid ${colors.proposal}` }}>
+          <div className="badge" style={{ background: 'rgba(239, 68, 68, 0.2)', color: colors.proposal, marginBottom: '1rem' }}>🔥 Top-Tier Idea</div>
+          <h3 className="h3-title" style={{ color: colors.proposal }}>1. Proposal Generator</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Problem:</strong> Writing professional proposals is intensely time-consuming and often yields low conversion rates.<br/><strong>Impact:</strong> This tool directly impacts user income. People will pay for this daily.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.proposal }}>Exact User Inputs</h4>
               <ul>
                 <li>Client requirement (text or notes)</li>
                 <li>Budget constraints / Range</li>
@@ -186,7 +238,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.proposal }}>Backend Processing</h4>
               <ul>
                 <li>Analyzes requirements against industry standards</li>
                 <li>Generates persuasive, high-converting copy</li>
@@ -195,7 +247,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.proposal }}>Structured Output</h4>
               <ul>
                 <li>Full, professional proposal document</li>
                 <li>Detailed pricing breakdown</li>
@@ -208,26 +260,26 @@ const App = () => {
         </div>
 
         {/* 2. Scope Breakdown Tool */}
-        <div id="tool-scope" className="spec-box">
-          <h3 className="h3-title">2. Scope Breakdown Tool</h3>
+        <div id="tool-scope" className="spec-box" style={{ borderLeft: `4px solid ${colors.scope}` }}>
+          <h3 className="h3-title" style={{ color: colors.scope }}>2. Scope Breakdown Tool</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Problem:</strong> Clients request "just small work" which inevitably balloons into huge, unpaid scope creep.<br/><strong>Impact:</strong> Saves hours of negotiation and prevents massive financial loss for freelancers/agencies.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.scope }}>Exact User Inputs</h4>
               <ul>
                 <li>Vague client requirements (text, meeting notes, or emails)</li>
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.scope }}>Backend Processing</h4>
               <ul>
                 <li>Converts vague text into structured technical language</li>
                 <li><strong>Automatically adds hidden tasks</strong> that clients forget (QA, testing, deployment, documentation, revisions)</li>
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.scope }}>Structured Output</h4>
               <ul>
                 <li>Structured Scope of Work document</li>
                 <li>Can act as an SRS (Software Requirement Specification) generator</li>
@@ -238,20 +290,20 @@ const App = () => {
         </div>
 
         {/* 3. Hiring Decision Tool */}
-        <div id="tool-hiring" className="spec-box">
-          <h3 className="h3-title">3. Hiring Decision Tool</h3>
+        <div id="tool-hiring" className="spec-box" style={{ borderLeft: `4px solid ${colors.hiring}` }}>
+          <h3 className="h3-title" style={{ color: colors.hiring }}>3. Hiring Decision Tool</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Problem:</strong> Bad hires are incredibly expensive for companies. Screening is tedious.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.hiring }}>Exact User Inputs</h4>
               <ul>
                 <li>Target Job Role / Description</li>
                 <li>Bulk resumes received (PDFs/Docs)</li>
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.hiring }}>Backend Processing</h4>
               <ul>
                 <li>Parses resumes en masse</li>
                 <li>Matches skills and experience against the role</li>
@@ -260,7 +312,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.hiring }}>Structured Output</h4>
               <ul>
                 <li>Clear Hire / Reject signal per candidate</li>
                 <li>Detailed risk analysis report</li>
@@ -271,13 +323,13 @@ const App = () => {
         </div>
 
         {/* 4. Tweet Generator */}
-        <div id="tool-tweet" className="spec-box">
-          <h3 className="h3-title">4. Tweet Generator for X</h3>
+        <div id="tool-tweet" className="spec-box" style={{ borderLeft: `4px solid ${colors.tweet}` }}>
+          <h3 className="h3-title" style={{ color: colors.tweet }}>4. Tweet Generator for X</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> Generate highly engaging, viral-ready content tailored to specific niches.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.tweet }}>Exact User Inputs</h4>
               <ul>
                 <li>Niche (AI, entrepreneurship, etc.)</li>
                 <li>Target audience</li>
@@ -288,7 +340,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.tweet }}>Backend Processing</h4>
               <ul>
                 <li>Pulls real-time trending topics from Google Trends, YouTube, Reddit, and X</li>
                 <li>Identifies proven viral hooks and content formats</li>
@@ -296,7 +348,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.tweet }}>Structured Output</h4>
               <ul>
                 <li>10 ready-to-post tweets</li>
                 <li>Strong hooks + clean formatting applied</li>
@@ -307,13 +359,13 @@ const App = () => {
         </div>
 
         {/* 5. Domain Finder */}
-        <div id="tool-domain" className="spec-box">
-          <h3 className="h3-title">5. Domain Finder Tool</h3>
+        <div id="tool-domain" className="spec-box" style={{ borderLeft: `4px solid ${colors.domain}` }}>
+          <h3 className="h3-title" style={{ color: colors.domain }}>5. Domain Finder Tool</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> AI-powered tool to generate brandable domain names with real-time availability and risk checks.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.domain }}>Exact User Inputs</h4>
               <ul>
                 <li>Business niche + keywords</li>
                 <li>Brand style (premium, catchy, techy, etc.)</li>
@@ -322,7 +374,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.domain }}>Backend Processing</h4>
               <ul>
                 <li>AI generation of unique, non-generic names based on brand style</li>
                 <li>Real-time domain availability API checks</li>
@@ -330,7 +382,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.domain }}>Structured Output</h4>
               <ul>
                 <li>List of available domain names (ready to buy immediately)</li>
                 <li>Categorized brand-style variations</li>
@@ -341,13 +393,13 @@ const App = () => {
         </div>
 
         {/* 6. Idea Validator */}
-        <div id="tool-validator" className="spec-box">
-          <h3 className="h3-title">6. Startup Idea Validator</h3>
+        <div id="tool-validator" className="spec-box" style={{ borderLeft: `4px solid ${colors.idea}` }}>
+          <h3 className="h3-title" style={{ color: colors.idea }}>6. Startup Idea Validator</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> Transforms a raw, untested idea into a complete, data-backed research dashboard.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.idea }}>Exact User Inputs</h4>
               <ul>
                 <li>Startup idea description</li>
                 <li>Target market / audience definition</li>
@@ -355,7 +407,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.idea }}>Backend Processing</h4>
               <ul>
                 <li>Multi-agent research protocol investigating the core idea, existing competitors, past startup failures, and total market size</li>
                 <li>Pulls real-world data and market trends</li>
@@ -363,7 +415,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.idea }}>Structured Output</h4>
               <ul>
                 <li>Clean, visual dashboard presenting key insights</li>
                 <li>Detailed competitor and failure analysis report</li>
@@ -374,13 +426,13 @@ const App = () => {
         </div>
 
         {/* 7. Exam Prep */}
-        <div id="tool-exam" className="spec-box">
-          <h3 className="h3-title">7. Exam Prep Analyzer</h3>
+        <div id="tool-exam" className="spec-box" style={{ borderLeft: `4px solid ${colors.exam}` }}>
+          <h3 className="h3-title" style={{ color: colors.exam }}>7. Exam Prep Analyzer</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> The ultimate last-minute study tool that reverse-engineers past exam papers to identify scoring patterns.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.exam }}>Exact User Inputs</h4>
               <ul>
                 <li>Upload 3–5 previous year exam papers</li>
                 <li>Exam format / pattern details</li>
@@ -388,7 +440,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.exam }}>Backend Processing</h4>
               <ul>
                 <li>OCR and parsing of complex exam documents</li>
                 <li>Detects repeated questions, semantic similarities, and patterns</li>
@@ -397,7 +449,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.exam }}>Structured Output</h4>
               <ul>
                 <li>List of critical, important, and repeated questions</li>
                 <li>2–3 generated mock papers mirroring the exact format</li>
@@ -408,13 +460,13 @@ const App = () => {
         </div>
 
         {/* 8. Trading Assistant */}
-        <div id="tool-trading" className="spec-box" style={{ borderLeft: '4px solid #f59e0b' }}>
-          <h3 className="h3-title">8. Trading Assistant (Short-Term Focus)</h3>
+        <div id="tool-trading" className="spec-box" style={{ borderLeft: `4px solid ${colors.trading}` }}>
+          <h3 className="h3-title" style={{ color: colors.trading }}>8. Trading Assistant (Short-Term Focus)</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> Smart decision-making tool utilizing specific logic tailored exclusively for day trading or swing trading.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.trading }}>Exact User Inputs</h4>
               <ul>
                 <li>Trade details (asset ticker, amount, Stop Loss / Take Profit targets)</li>
                 <li>User's risk appetite</li>
@@ -422,7 +474,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.trading }}>Backend Processing</h4>
               <ul>
                 <li>Heavy emphasis on Technical Indicators</li>
                 <li>Short-term signal aggregation</li>
@@ -431,7 +483,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.trading }}>Structured Output</h4>
               <ul>
                 <li>Clear, unambiguous decision signal (Go / No-Go)</li>
                 <li>Mode-specific short-term market insights</li>
@@ -442,13 +494,13 @@ const App = () => {
         </div>
 
         {/* 9. Investment Assistant */}
-        <div id="tool-investment" className="spec-box" style={{ borderLeft: '4px solid #10b981' }}>
-          <h3 className="h3-title">9. Investment Assistant (Long-Term Focus)</h3>
+        <div id="tool-investment" className="spec-box" style={{ borderLeft: `4px solid ${colors.investment}` }}>
+          <h3 className="h3-title" style={{ color: colors.investment }}>9. Investment Assistant (Long-Term Focus)</h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> Distinct decision-making tool utilizing logic tailored exclusively for long-term investing horizons.</p>
           
           <div className="tech-grid">
             <div className="tech-column">
-              <h4>Exact User Inputs</h4>
+              <h4 style={{ color: colors.investment }}>Exact User Inputs</h4>
               <ul>
                 <li>Investment details (asset ticker, capital amount)</li>
                 <li>User's risk appetite</li>
@@ -456,7 +508,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Backend Processing</h4>
+              <h4 style={{ color: colors.investment }}>Backend Processing</h4>
               <ul>
                 <li>Heavy emphasis on Fundamental Analysis (earnings, debt, moat)</li>
                 <li>Evaluation of long-term macro-economic trends</li>
@@ -464,7 +516,7 @@ const App = () => {
               </ul>
             </div>
             <div className="tech-column">
-              <h4>Structured Output</h4>
+              <h4 style={{ color: colors.investment }}>Structured Output</h4>
               <ul>
                 <li>Clear, unambiguous decision signal (Go / No-Go)</li>
                 <li>Mode-specific long-term insights (compounding potential, moat strength)</li>
@@ -484,10 +536,10 @@ const App = () => {
         <div className="strategy-grid" style={{ gridTemplateColumns: '1fr', gap: '2rem' }}>
           
           {/* Pillar 1 */}
-          <div id="marketing-seo" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem' }}>
-            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem' }}>🔍</div>
+          <div id="marketing-seo" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem', borderLeft: `4px solid ${marketingColors.seo}` }}>
+            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem', color: marketingColors.seo, background: `${marketingColors.seo}20` }}>🔍</div>
             <div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>1. SEO-Led Growth (Utility-First Approach)</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: marketingColors.seo }}>1. SEO-Led Growth (Utility-First Approach)</h3>
               <p style={{ color: 'var(--text-secondary)' }}>
                 The core baseline strategy is to leverage SEO through the individual utility tools themselves. Each tool acts as an independent entry point into the platform. If even one single tool ranks well on Google or goes viral, it brings consistent, high-intent organic traffic to the domain.<br/><br/>
                 Because all tools are hosted under the same ecosystem, a compounding effect occurs: users discovering one tool are naturally exposed to others via internal linking. One successful tool boosts overall domain authority, increasing the ranking power of every subsequent tool we launch.
@@ -496,10 +548,10 @@ const App = () => {
           </div>
 
           {/* Pillar 2 */}
-          <div id="marketing-reels" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem' }}>
-            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem' }}>📱</div>
+          <div id="marketing-reels" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem', borderLeft: `4px solid ${marketingColors.reels}` }}>
+            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem', color: marketingColors.reels, background: `${marketingColors.reels}20` }}>📱</div>
             <div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>2. Short-Form Content Distribution (Reels Strategy)</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: marketingColors.reels }}>2. Short-Form Content Distribution (Reels Strategy)</h3>
               <p style={{ color: 'var(--text-secondary)' }}>
                 The primary active distribution channel will be short-form video content (TikTok, IG Reels, YouTube Shorts). Every tool built will be converted into simple, engaging demo content.<br/><br/>
                 <strong>Execution approach:</strong> Show the problem → Show the tool → Show the instant result. Keep videos short, clear, and outcome-focused. Initially, there will be no heavy branding—the absolute focus is on utility and value demonstration.<br/><br/>
@@ -509,10 +561,10 @@ const App = () => {
           </div>
 
           {/* Pillar 3 */}
-          <div id="marketing-user" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem' }}>
-            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem' }}>💡</div>
+          <div id="marketing-user" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem', borderLeft: `4px solid ${marketingColors.user}` }}>
+            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem', color: marketingColors.user, background: `${marketingColors.user}20` }}>💡</div>
             <div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>3. User-Driven Idea Generation</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: marketingColors.user }}>3. User-Driven Idea Generation</h3>
               <p style={{ color: 'var(--text-secondary)' }}>
                 The platform will include a prominent feature allowing users to suggest new utility tools they desperately need. This creates a continuous idea pipeline without internal brainstorming bottlenecks, providing instant validation from real user demand.<br/><br/>
                 It fosters higher engagement and a deep sense of ownership from the community. Over time, this evolves into a public voting system for the most requested tools, allowing us to build "requested by users" tools that guarantee high retention and identify high-demand niches much faster.
@@ -521,10 +573,10 @@ const App = () => {
           </div>
 
           {/* Pillar 4 */}
-          <div id="marketing-referral" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem' }}>
-            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem' }}>🔗</div>
+          <div id="marketing-referral" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem', borderLeft: `4px solid ${marketingColors.referral}` }}>
+            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem', color: marketingColors.referral, background: `${marketingColors.referral}20` }}>🔗</div>
             <div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>4. Referral Loop (Credit-Based Growth)</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: marketingColors.referral }}>4. Referral Loop (Credit-Based Growth)</h3>
               <p style={{ color: 'var(--text-secondary)' }}>
                 A built-in referral system incentivizes users to aggressively invite others. <br/><br/>
                 <strong>Mechanism:</strong> When a user signs up or uses a tool via a referral link, both the referrer and the new user receive extra free credits. <br/><br/>
@@ -534,10 +586,10 @@ const App = () => {
           </div>
 
           {/* Pillar 5 */}
-          <div id="marketing-free" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem' }}>
-            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem' }}>🆓</div>
+          <div id="marketing-free" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem', borderLeft: `4px solid ${marketingColors.free}` }}>
+            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem', color: marketingColors.free, background: `${marketingColors.free}20` }}>🆓</div>
             <div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>5. Free Tool Layer (Zero-Cost Utilities for Traffic)</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: marketingColors.free }}>5. Free Tool Layer (Zero-Cost Utilities for Traffic)</h3>
               <p style={{ color: 'var(--text-secondary)' }}>
                 A strategic portion of the platform will consist of completely free utility tools. These are specifically tools that have little to no backend or API cost, relying on simple frontend/backend processing logic without expensive external dependencies.<br/><br/>
                 <strong>Purpose:</strong> Remove all friction for new users, rapidly increase organic traffic and dwell time, and strengthen SEO through high engagement and repeat visits.<br/><br/>
@@ -547,10 +599,10 @@ const App = () => {
           </div>
 
           {/* Pillar 6 */}
-          <div id="marketing-brand" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem', borderColor: 'var(--accent-primary)', background: 'rgba(59, 130, 246, 0.05)' }}>
-            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem', background: 'var(--accent-primary)', color: '#fff' }}>🏷️</div>
+          <div id="marketing-brand" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem', borderLeft: `4px solid ${marketingColors.brand}` }}>
+            <div className="icon-wrap" style={{ flexShrink: 0, width: '80px', height: '80px', fontSize: '2.5rem', color: marketingColors.brand, background: `${marketingColors.brand}20` }}>🏷️</div>
             <div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--accent-primary)' }}>6. Brand Positioning (Low-Cost, High-Utility Mental Model)</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: marketingColors.brand }}>6. Brand Positioning (Low-Cost, High-Utility Mental Model)</h3>
               <p style={{ color: 'var(--text-secondary)' }}>
                 The entire platform is built around a brilliantly simple and powerful mental model: <strong>Affordable, accessible, utility-first tools — identical to the psychology of a "$1 store".</strong><br/><br/>
                 <strong>Key Advantages:</strong> It is instantly understandable with zero complex explanations needed. It possesses incredibly strong recall value due to familiar pricing psychology. Users are already universally conditioned to associate "low-cost" with low-risk experimentation.<br/><br/>
