@@ -245,8 +245,12 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
     width: 100%; 
     max-width: 300px;
     box-shadow: 20px 0 50px rgba(0,0,0,0.8);
+    padding-top: 80px; /* Push content below the fixed header */
+    top: 0;
   }
   .sidebar.open { transform: translateX(0); }
+  
+  .sidebar-logo-container { display: none; } /* Hide redundant logo on mobile */
   
   /* Sidebar Backdrop when open */
   .sidebar.open::after {

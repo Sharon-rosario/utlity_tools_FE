@@ -80,7 +80,7 @@ const App = () => {
 
       {/* SIDEBAR NAVIGATION */}
       <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-        <div style={{ marginBottom: '3rem', marginTop: '1rem' }}>
+        <div className="sidebar-logo-container" style={{ marginBottom: '3rem', marginTop: '1rem' }}>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800 }}>UTILITY<span style={{ color: 'var(--accent-primary)' }}>TOOL</span></h2>
           <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>COMPREHENSIVE VISION v3.0</p>
         </div>
