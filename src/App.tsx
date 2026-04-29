@@ -722,7 +722,7 @@ const App = () => {
           The growth strategy is a compounding system built on six meticulously designed pillars. Each new tool, user, and piece of content is engineered to contribute to the overall platform's exponential growth.
         </p>
 
-        <div className="strategy-grid" style={{ gridTemplateColumns: '1fr', gap: '2rem' }}>
+        <div className="strategy-grid" style={{ gridTemplateColumns: '1fr', gap: '3.5rem' }}>
           
           {/* Pillar 1 */}
           <div id="marketing-seo" className="strategy-card" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '2rem', borderLeft: `4px solid ${marketingColors.seo}` }}>
