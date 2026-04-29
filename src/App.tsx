@@ -20,7 +20,9 @@ import {
   Award,
   Menu,
   X,
-  ChevronRight
+  ChevronRight,
+  Video,
+  Instagram
 } from 'lucide-react';
 import './index.css';
 
@@ -56,7 +58,9 @@ const App = () => {
     idea: '#f97316',     // Orange
     exam: '#14b8a6',     // Teal
     trading: '#f59e0b',  // Amber
-    investment: '#10b981'// Green
+    investment: '#10b981',// Green
+    video: '#a855f7',    // Purple
+    profile: '#f43f5e'   // Rose
   };
 
   const marketingColors = {
@@ -125,6 +129,12 @@ const App = () => {
             </a>
             <a href="#tool-investment" className="nav-link color-nav" style={{ '--hover-color': colors.investment } as React.CSSProperties} onClick={handleLinkClick}>
               <span className="nav-dot" style={{ backgroundColor: colors.investment }}></span> 9. Investment Assistant
+            </a>
+            <a href="#tool-video" className="nav-link color-nav" style={{ '--hover-color': colors.video } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.video }}></span> 10. Video Auditor
+            </a>
+            <a href="#tool-profile" className="nav-link color-nav" style={{ '--hover-color': colors.profile } as React.CSSProperties} onClick={handleLinkClick}>
+              <span className="nav-dot" style={{ backgroundColor: colors.profile }}></span> 11. Profile Architect
             </a>
           </div>
 
@@ -588,6 +598,79 @@ const App = () => {
                 <li>Clear, unambiguous decision signal (Go / No-Go)</li>
                 <li>Mode-specific long-term insights (compounding potential, moat strength)</li>
                 <li>Portfolio construction and strategy improvement suggestions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* 10. Video Auditor */}
+        <div id="tool-video" className="spec-box" style={{ borderLeft: `4px solid ${colors.video}` }}>
+          <h3 className="h3-title" style={{ color: colors.video }}>
+            <Video size={24} style={{ marginRight: '8px' }} /> 10. Viral Video Auditor
+          </h3>
+          <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> Prevent creators from posting dead videos by auditing the content and generating complete, optimized metadata.</p>
+          
+          <div className="tech-grid">
+            <div className="tech-column">
+              <h4 style={{ color: colors.video }}>Exact User Inputs</h4>
+              <ul className="modern-list small">
+                <li>Video file upload (or URL)</li>
+                <li>Optional context / Niche</li>
+                <li>Target platform (Instagram Reels, YouTube Shorts, TikTok)</li>
+              </ul>
+            </div>
+            <div className="tech-column">
+              <h4 style={{ color: colors.video }}>Backend Processing</h4>
+              <ul className="modern-list small">
+                <li>Analyzes video/audio pacing, hook strength, and ending</li>
+                <li>Generates SEO-optimized metadata</li>
+                <li>Identifies trending keywords and hashtags for the specific niche</li>
+              </ul>
+            </div>
+            <div className="tech-column">
+              <h4 style={{ color: colors.video }}>Structured Output</h4>
+              <ul className="modern-list small">
+                <li><strong>Video Score:</strong> Ranking based on points with 2-3 specific suggestions (e.g., "Hook is weak", "Ending is too promotional")</li>
+                <li>Multiple Title / Hook variations</li>
+                <li>Basic keyword list & trending hashtags</li>
+                <li>Formatted captions & a pinned "first comment" suggestion</li>
+                <li>A note explaining *why* these elements matter for high views</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* 11. Profile Architect */}
+        <div id="tool-profile" className="spec-box" style={{ borderLeft: `4px solid ${colors.profile}` }}>
+          <h3 className="h3-title" style={{ color: colors.profile }}>
+            <Instagram size={24} style={{ marginRight: '8px' }} /> 11. Social Profile Architect
+          </h3>
+          <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> A launchpad for new Instagram/Social accounts, bypassing hours of tedious setup, design, and competitor research.</p>
+          
+          <div className="tech-grid">
+            <div className="tech-column">
+              <h4 style={{ color: colors.profile }}>Exact User Inputs</h4>
+              <ul className="modern-list small">
+                <li>Core niche / Topic</li>
+                <li>Desired brand vibe / Tone</li>
+              </ul>
+            </div>
+            <div className="tech-column">
+              <h4 style={{ color: colors.profile }}>Backend Processing</h4>
+              <ul className="modern-list small">
+                <li><strong>Real Availability Checks:</strong> Ensures generated usernames are actually available (bypassing AI hallucination issues)</li>
+                <li>Analyzes top performers in the given niche</li>
+                <li>Generates cohesive visual themes</li>
+              </ul>
+            </div>
+            <div className="tech-column">
+              <h4 style={{ color: colors.profile }}>Structured Output</h4>
+              <ul className="modern-list small">
+                <li>Username suggestions (100% verified available)</li>
+                <li>Profile picture concept suggestions</li>
+                <li>Theme layout options with color palettes (Insta grid view)</li>
+                <li>Bio suggestions tailored to the niche</li>
+                <li><strong>Competitor intel:</strong> Direct links to top accounts to follow, including links to their best-performing videos for inspiration</li>
               </ul>
             </div>
           </div>
