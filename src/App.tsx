@@ -25,6 +25,35 @@ import {
 } from 'lucide-react';
 import './index.css';
 
+const EfficiencyGauge = ({ range, percentage, color }: { range: string, percentage: number, color: string }) => {
+  const radius = 16;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percentage / 100) * circumference;
+
+  return (
+    <div className="efficiency-badge">
+      <div className="gauge-container">
+        <svg className="gauge-svg">
+          <circle className="gauge-bg" cx="20" cy="20" r={radius} />
+          <circle 
+            className="gauge-fill" 
+            cx="20" 
+            cy="20" 
+            r={radius} 
+            stroke={color}
+            style={{ strokeDasharray: `${circumference} ${circumference}`, strokeDashoffset: offset }}
+          />
+        </svg>
+        <span className="gauge-text" style={{ position: 'absolute' }}>{percentage}%</span>
+      </div>
+      <div className="time-label">
+        <span className="time-range">{range}</span>
+        <span className="time-desc">Manual Hours Saved</span>
+      </div>
+    </div>
+  );
+};
+
 const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
@@ -317,6 +346,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="4h - 10h" percentage={58} color={colors.proposal} />
         </div>
 
         {/* 2. Scope Breakdown Tool */}
@@ -349,6 +379,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="2h - 4h" percentage={25} color={colors.scope} />
         </div>
 
         {/* 3. Hiring Decision Tool */}
@@ -384,6 +415,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="4h - 8h" percentage={50} color={colors.hiring} />
         </div>
 
         {/* 4. Tweet Generator */}
@@ -422,6 +454,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="1h - 2h" percentage={12} color={colors.tweet} />
         </div>
 
         {/* 5. Domain Finder */}
@@ -458,6 +491,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="1h - 3h" percentage={16} color={colors.domain} />
         </div>
 
         {/* 6. Idea Validator */}
@@ -493,6 +527,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="6h - 12h" percentage={75} color={colors.idea} />
         </div>
 
         {/* 7. Exam Prep */}
@@ -529,6 +564,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="3h - 6h" percentage={37} color={colors.exam} />
         </div>
 
         {/* 8. Trading Assistant */}
@@ -565,6 +601,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="1h - 2h" percentage={12} color={colors.trading} />
         </div>
 
         {/* 9. Investment Assistant */}
@@ -600,6 +637,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="5h - 10h" percentage={62} color={colors.investment} />
         </div>
 
         {/* 10. Video Auditor */}
@@ -637,6 +675,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="2h - 4h" percentage={25} color={colors.video} />
         </div>
 
         {/* 11. Profile Architect */}
@@ -673,6 +712,7 @@ const App = () => {
               </ul>
             </div>
           </div>
+          <EfficiencyGauge range="3h - 5h" percentage={33} color={colors.profile} />
         </div>
 
 

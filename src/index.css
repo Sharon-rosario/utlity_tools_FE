@@ -126,7 +126,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
   border: 1px solid var(--border-glass);
   border-radius: 1.5rem;
   padding: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   transition: all 0.4s ease;
   position: relative;
 }
@@ -286,3 +286,68 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
 /* Pricing */
 .pricing-section { text-align: center; margin: 4rem 0; }
 .big-price { font-size: clamp(4rem, 12vw, 8rem); font-weight: 900; line-height: 1; margin: 1rem 0; }
+
+/* Efficiency Gauge */
+.efficiency-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  padding: 0.75rem 1.25rem;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  width: fit-content;
+}
+
+.gauge-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.gauge-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 3;
+}
+
+.gauge-fill {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease-out;
+}
+
+.gauge-text {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.time-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-range {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.time-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
