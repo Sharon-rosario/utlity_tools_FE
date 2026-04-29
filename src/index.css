@@ -205,11 +205,22 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
   padding: 3rem;
   display: flex;
   transition: all 0.4s ease;
+  margin-bottom: 3.5rem; /* Fallback for older browsers or flex issues */
 }
 
 .strategy-card:hover {
   background: var(--bg-surface);
   transform: scale(1.01);
+}
+
+.strategy-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.strategy-card:last-child {
+  margin-bottom: 0;
 }
 
 /* Sidebar Styling */
