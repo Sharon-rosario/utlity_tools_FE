@@ -20,9 +20,8 @@ import {
   Award,
   Menu,
   X,
-  ChevronRight,
   Video,
-  Instagram
+  Camera
 } from 'lucide-react';
 import './index.css';
 
@@ -643,7 +642,7 @@ const App = () => {
         {/* 11. Profile Architect */}
         <div id="tool-profile" className="spec-box" style={{ borderLeft: `4px solid ${colors.profile}` }}>
           <h3 className="h3-title" style={{ color: colors.profile }}>
-            <Instagram size={24} style={{ marginRight: '8px' }} /> 11. Social Profile Architect
+            <Camera size={24} style={{ marginRight: '8px' }} /> 11. Social Profile Architect
           </h3>
           <p className="subtitle" style={{ marginBottom: '1.5rem', fontSize: '1rem' }}><strong>Concept:</strong> A launchpad for new Instagram/Social accounts, bypassing hours of tedious setup, design, and competitor research.</p>
           
