@@ -19,7 +19,7 @@ const Pricing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-bg-primary py-32 px-[8%] relative overflow-hidden">
+    <div className="min-h-screen bg-bg-primary py-20 md:py-32 px-6 md:px-[8%] relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 organic-grid opacity-[0.03] pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-accent-primary/5 to-transparent pointer-events-none" />
@@ -29,10 +29,10 @@ const Pricing = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border-strong bg-bg-surface text-[10px] font-black uppercase tracking-[0.2em] text-accent-primary mb-8">
             <Database size={12} /> Resource Allocation Protocol
           </div>
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.8]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[0.8]">
             Fuel Your <span className="text-gradient">Execution.</span>
           </h1>
-          <p className="text-xl text-text-secondary font-medium leading-relaxed italic">
+          <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed italic max-w-2xl mx-auto">
             Industrial-grade tools require industrial-grade fuel. No monthly traps. No "cancel anytime" headaches. Buy what you need, use it when you're ready.
           </p>
           <div className="mt-8 flex items-center justify-center gap-8 text-[10px] font-black uppercase tracking-widest text-text-muted">
@@ -42,7 +42,7 @@ const Pricing = () => {
           </div>
         </header>
 
-        <div className="grid lg:grid-cols-[1fr_450px] gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_450px] gap-12 lg:gap-20 items-start">
           <div className="space-y-12">
             {/* Standard Plans */}
             <div className="grid gap-6">
@@ -63,13 +63,13 @@ const Pricing = () => {
                     </div>
                     <div>
                       <div className="text-[10px] font-black text-accent-primary uppercase tracking-widest mb-1">{plan.description}</div>
-                      <h3 className="text-4xl font-black text-text-primary tracking-tighter">{plan.credits} <span className="text-text-secondary font-medium text-2xl">Credits</span></h3>
+                      <h3 className="text-3xl font-black text-text-primary tracking-tighter">{plan.credits} <span className="text-text-secondary font-medium text-xl">Credits</span></h3>
                     </div>
                   </div>
 
                   <div className="text-right">
-                    <div className="text-5xl font-black text-text-primary tracking-tighter">${plan.price}</div>
-                    <div className={`text-xs font-black uppercase tracking-widest mt-2 ${plan.id > 1 ? 'text-emerald-500' : 'text-text-muted'}`}>
+                    <div className="text-4xl font-black text-text-primary tracking-tighter">${plan.price}</div>
+                    <div className={`text-[10px] font-black uppercase tracking-widest mt-2 ${plan.id > 1 ? 'text-emerald-500' : 'text-text-muted'}`}>
                       {plan.id > 1 ? `Save ${plan.savings}` : 'Standard Rate'}
                     </div>
                   </div>
@@ -114,7 +114,7 @@ const Pricing = () => {
             </div>
           </div>
 
-          <aside className="sticky top-32 space-y-8">
+          <aside className="lg:sticky lg:top-32 space-y-8">
             {/* Credit Visualizer */}
             <div className="bg-gradient-to-br from-bg-surface to-bg-primary p-10 rounded-[50px] border border-border-strong shadow-2xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-48 h-48 bg-accent-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl group-hover:bg-accent-primary/20 transition-all duration-1000"></div>
@@ -129,8 +129,8 @@ const Pricing = () => {
               <div className="mb-12 relative z-10">
                 <div className="text-[10px] font-black text-text-muted uppercase tracking-widest mb-3">Live Balance</div>
                 <div className="flex items-baseline gap-2">
-                  <div className="text-8xl font-black text-text-primary tracking-tighter">0.00</div>
-                  <div className="text-xl font-bold text-accent-primary uppercase tracking-widest">Active</div>
+                  <div className="text-7xl font-black text-text-primary tracking-tighter">0.00</div>
+                  <div className="text-lg font-bold text-accent-primary uppercase tracking-widest">Active</div>
                 </div>
               </div>
 
@@ -162,8 +162,8 @@ const Pricing = () => {
                   </span>
                 </div>
                 <div className="flex justify-between items-center pt-6 border-t border-border-light">
-                  <span className="text-text-primary font-black uppercase tracking-widest text-xs">Total USD</span>
-                  <span className="text-accent-primary font-black text-4xl tracking-tighter">
+                  <span className="text-text-primary font-black uppercase tracking-widest text-[10px]">Total USD</span>
+                  <span className="text-accent-primary font-black text-3xl tracking-tighter">
                     ${selectedPlan ? plans.find(p => p.id === selectedPlan)?.price : calculateCustomPrice(customAmount)}
                   </span>
                 </div>
