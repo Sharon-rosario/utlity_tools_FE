@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import ToolPageLayout from '../../../components/ToolPageLayout';
 import { 
   Scan, 
@@ -12,7 +12,6 @@ import {
   Copy,
   Check,
   Zap,
-  Activity,
   Search
 } from 'lucide-react';
 import jsQR from 'jsqr';

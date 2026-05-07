@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import ScrollToTop from './components/ScrollToTop';
 import Landing from './pages/Landing';
 import Blog from './pages/Blog';
 import Tools from './pages/Tools';
@@ -14,12 +15,18 @@ import GlassmorphismGen from './pages/Tools/GlassmorphismGen';
 import TaxLogic from './pages/Tools/TaxLogic';
 import SipForecaster from './pages/Tools/SipForecaster';
 import QrExtractor from './pages/Tools/QrExtractor';
+import InvoiceGenerator from './pages/Tools/InvoiceGenerator';
+import HookGenerator from './pages/Tools/HookGenerator';
+import RoiCalculator from './pages/Tools/RoiCalculator';
+import UnitConverter from './pages/Tools/UnitConverter';
+import MedicalHub from './pages/Tools/MedicalHub';
 import Pricing from './pages/Pricing';
 import './index.css';
 
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
@@ -35,6 +42,11 @@ const App: React.FC = () => {
           <Route path="tools/tax-logic" element={<TaxLogic />} />
           <Route path="tools/sip-forecaster" element={<SipForecaster />} />
           <Route path="tools/qr-extractor" element={<QrExtractor />} />
+          <Route path="tools/invoice-generator" element={<InvoiceGenerator />} />
+          <Route path="tools/hook-generator" element={<HookGenerator />} />
+          <Route path="tools/roi-calculator" element={<RoiCalculator />} />
+          <Route path="tools/unit-converter" element={<UnitConverter />} />
+          <Route path="tools/medical-hub" element={<MedicalHub />} />
           <Route path="pricing" element={<Pricing />} />
         </Route>
       </Routes>

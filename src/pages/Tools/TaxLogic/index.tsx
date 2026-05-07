@@ -1,10 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import ToolPageLayout from '../../../components/ToolPageLayout';
 import { 
   Percent, 
   DollarSign, 
   Calculator, 
-  Info, 
   ShieldCheck, 
   Activity, 
   TrendingUp, 

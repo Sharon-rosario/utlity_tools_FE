@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ToolPageLayout from '../../../components/ToolPageLayout';
 import { Sparkles, Code, Copy, Check, Palette, Layers } from 'lucide-react';
 

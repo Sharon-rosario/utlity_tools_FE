@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ToolPageLayout from '../../../components/ToolPageLayout';
 import { 
   Video, 
   Link2, 
   Zap, 
   FileText, 
-  AlertCircle, 
   Globe, 
   Activity, 
   ShieldCheck,

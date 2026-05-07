@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ToolPageLayout from '../../../components/ToolPageLayout';
 import { 
   Code, 
@@ -11,8 +11,7 @@ import {
   Type,
   Layers,
   Terminal,
-  ShieldCheck,
-  ChevronRight
+  ShieldCheck
 } from 'lucide-react';
 
 const JsonToTs = () => {

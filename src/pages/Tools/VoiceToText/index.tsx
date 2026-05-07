@@ -3,19 +3,14 @@ import ToolPageLayout from '../../../components/ToolPageLayout';
 import { 
   Mic, 
   Upload, 
-  FileText, 
-  AlertCircle, 
-  Download, 
-  Globe, 
-  Activity, 
-  Clock, 
-  CheckCircle,
+  FileText,  
+  Clock,
   Copy,
   Check,
+  Download,
   Settings,
   ShieldCheck,
-  Zap,
-  ChevronDown
+  Activity
 } from 'lucide-react';
 import CustomDropdown from '../../../components/shared/CustomDropdown';
 import { processTool } from '../../../services/api';

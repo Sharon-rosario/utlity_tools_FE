@@ -2,10 +2,8 @@ import React, { useState, useMemo } from 'react';
 import ToolPageLayout from '../../../components/ToolPageLayout';
 import { 
   Calculator, 
-  TrendingUp, 
   DollarSign, 
   Calendar, 
-  Info, 
   Activity, 
   Table as TableIcon,
   PieChart as ChartIcon,

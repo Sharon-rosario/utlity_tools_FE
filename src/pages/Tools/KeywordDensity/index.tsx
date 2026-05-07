@@ -1,17 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import ToolPageLayout from '../../../components/ToolPageLayout';
 import { 
   Search, 
-  FileText, 
-  BarChart, 
-  AlertTriangle, 
-  CheckCircle, 
-  Activity, 
-  BookOpen, 
-  TrendingUp, 
-  Settings,
-  Target,
-  LineChart as LineIcon
+  ShieldCheck,
+  Code
 } from 'lucide-react';
 
 const KeywordDensity = () => {

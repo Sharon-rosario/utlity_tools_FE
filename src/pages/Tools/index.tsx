@@ -73,6 +73,7 @@ const Tools = () => {
     { name: 'Education', icon: <BookOpen size={14} /> },
     { name: 'Engineering', icon: <Cpu size={14} /> },
     { name: 'Marketing', icon: <TrendingUp size={14} /> },
+    { name: 'Medical', icon: <Activity size={14} /> },
   ];
 
   return (
@@ -129,7 +130,7 @@ const Tools = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               <div className="hidden md:flex items-center gap-4 pr-8">
-                <kbd className="px-3 py-1.5 rounded-lg bg-bg-primary border border-border-light text-[10px] font-black text-text-muted tracking-widest uppercase">ALT + K</kbd>
+                <kbd className="px-3 py-1.5 rounded-lg bg-bg-primary border border-border-light text-[10px] font-black text-text-muted tracking-widest uppercase whitespace-nowrap">ALT + K</kbd>
               </div>
             </div>
           </div>

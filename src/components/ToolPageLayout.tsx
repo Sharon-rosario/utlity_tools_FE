@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronLeft, Shield, Zap, Activity, MessageSquare, HelpCircle, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Shield, Zap, Activity, MessageSquare, HelpCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ToolPageLayoutProps {
@@ -32,34 +32,28 @@ const ToolPageLayout: React.FC<ToolPageLayoutProps> = ({
 }) => {
   return (
     <div className="min-h-screen selection:bg-accent-primary selection:text-white">
-      {/* Navigation Bar */}
-      <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 backdrop-blur-md border-b border-border-light bg-bg-primary/50">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-4 text-text-muted text-[10px] font-black uppercase tracking-[0.2em]">
+      <main className="pt-8 md:pt-12 pb-24 px-6 max-w-[1400px] mx-auto">
+        {/* Breadcrumb Navigation */}
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-12">
+          <div className="flex items-center flex-wrap gap-2 md:gap-4 text-text-muted text-[10px] font-black uppercase tracking-[0.2em]">
             <Link to="/" className="hover:text-accent-primary transition-colors flex items-center gap-2">
               <div className="p-1.5 rounded-lg bg-bg-surface border border-border-light hover:border-accent-primary">
                 <ChevronLeft size={14} />
               </div>
               UtilFactory
             </Link>
-            <span className="text-white/20">/</span>
+            <ChevronRight size={12} className="text-white/20" />
             <Link to="/tools" className="hover:text-white transition-colors">Tools</Link>
-            <span className="text-white/20">/</span>
+            <ChevronRight size={12} className="text-white/20" />
             <span className="text-accent-primary">{title}</span>
           </div>
           
-          <div className="flex items-center gap-6">
-            <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[9px] font-black text-emerald-500 uppercase tracking-widest">Active System</span>
-              </div>
-            </div>
+          <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[9px] font-black text-emerald-500 uppercase tracking-widest">Active System</span>
           </div>
         </div>
-      </nav>
 
-      <main className="pt-32 pb-24 px-6 max-w-[1400px] mx-auto">
         {/* Header Section */}
         <div className="relative mb-20">
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-accent-primary/20 rounded-full blur-[120px] pointer-events-none opacity-50" />
@@ -69,12 +63,17 @@ const ToolPageLayout: React.FC<ToolPageLayoutProps> = ({
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-text-secondary text-[10px] font-black uppercase tracking-[0.3em]">
                 <Zap size={12} className="text-accent-primary" /> Verified Utility
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-[0.85] text-gradient">
-                {title}
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-[0.85] text-gradient flex items-center gap-4">
+                <span className="text-accent-primary/80 hidden md:inline-flex">{icon}</span> {title}
               </h1>
-              <p className="text-lg md:text-xl text-text-secondary font-medium tracking-tight leading-relaxed">
-                {tagline}
-              </p>
+              <div className="space-y-2">
+                <p className="text-xl md:text-2xl text-white font-bold tracking-tight">
+                  {tagline}
+                </p>
+                <p className="text-base md:text-lg text-text-secondary font-medium tracking-tight leading-relaxed max-w-2xl">
+                  {description}
+                </p>
+              </div>
             </div>
             
             <div className="flex flex-wrap gap-4">

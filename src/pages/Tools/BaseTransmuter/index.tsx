@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ToolPageLayout from '../../../components/ToolPageLayout';
 import { 
   Repeat, 
@@ -20,7 +20,6 @@ const BaseTransmuter = () => {
   const [decimal, setDecimal] = useState<string>('');
   const [binary, setBinary] = useState<string>('');
   const [hex, setHex] = useState<string>('');
-  const [octal, setOctal] = useState<string>('');
   const [ascii, setAscii] = useState<string>('');
 
   const updateFromDecimal = (value: string) => {
